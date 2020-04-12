@@ -1,0 +1,124 @@
+$logo-width: 120px;
+$logo-height: 100px;
+$logo-border: 25px;
+
+$section-spacing: 50px;
+$centered-text-spacing: 25px;
+
+$browser-width: 500px;
+$browser-height: 350px;
+
+$start-scale: 0.5;
+
+body {
+	font-family: 'Amaranth', sans-serif;
+	background: #28333D;
+	padding: 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Amaranth', sans-serif;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+#logo {
+	background: url("../images/logo.png") no-repeat scroll 0 0;
+	width: $logo-width + (2 * $logo-border);
+	height: $logo-height;
+	margin: -($logo-height / 2) auto $logo-border + 20px auto;
+	border-left: solid $logo-border white;
+	border-right: solid $logo-border white;
+}
+
+.container {
+	margin: 30px auto;
+	padding: 0 emCalc($centered-text-spacing) 25px;
+	max-width: 62.5em;
+	background-color: #fff;
+}
+
+.section {
+
+	>* {
+		opacity: 0;
+		-ms-transform: scale($start-scale);
+		-o-transform: scale($start-scale);
+		-moz-transform: scale($start-scale);
+		-webkit-transform: scale($start-scale);
+		transform: scale($start-scale);
+	}
+
+	border-top: solid 1px #ccc;
+	margin-top: $section-spacing;
+	padding-top: $section-spacing;
+
+	&.header {
+		margin-top: 0;
+		border-top: 0 none;
+
+		.small-12.columns {
+			margin-top: 20px;
+			border-top: solid 1px #ccc;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+	}
+
+	&.no-space {
+		margin-top: 0;
+	}
+
+	&.hobbies {
+		img {
+			max-width: 80px;
+			max-height: 80px;
+			width: 50%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		p {
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		ul {
+			list-style-position: inside;
+
+			@media #{$small} {
+				padding-left: 25px;
+			}
+		}
+	}
+
+	&.footer {
+		margin-top: 30px;
+		padding-top: 20px;
+
+		img {
+			float: right;
+		}
+	}
+}
+
+.browser {
+	max-width: $browser-width;
+	max-height: $browser-height;
+	height: 90%;
+	width: 90%;
+	margin: 30px auto 0;
+	padding-top: 30px;
+	background: url("../images/browser.png") no-repeat scroll 0 0;
+}
+
+#top {
+	position: fixed;
+	bottom: 10%;
+	right: 0;
+	opacity: 0;
+}

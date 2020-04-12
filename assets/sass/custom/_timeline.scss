@@ -1,0 +1,152 @@
+$timeline-width: 650px;
+
+#timeline {
+	max-width: 650px;
+	width: 80%;
+	margin: 0 auto 20px;
+	text-align: center;
+	padding-top: 20px;
+	position: relative;
+
+	&:before {
+		content: '';
+		width: 4px;
+		background-color: #ccc;
+		position: absolute;
+		margin-left: 3px;
+		left: 50%;
+		top: 20px;
+		bottom: 5px;
+	}
+
+	li {
+		margin-top: 20px;
+
+		&:before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			background-color: #000;
+			border-radius: 50px;
+			position: absolute;
+			margin-top: 5px;
+			left: 50%;
+		}
+
+		.line:before {
+			content: '';
+			max-width: $timeline-width / 10;
+			width: 10%;
+			height: 4px;
+			background-color: #ccc;
+			position: absolute;
+			margin-top: 8px;
+			margin-left: 15px;
+		}
+
+		&:nth-child(odd) {
+			margin-left: 66%;
+			text-align: left;
+
+			.line:before {
+				margin-left: 10px;
+				left: 50%;
+			}
+
+			p.year:before {
+				content: '';
+				width: 10px;
+				height: 10px;
+				background-color: #000;
+				border-radius: 50px;
+				position: absolute;
+				margin-top: 5px;
+				left: 61%;
+			}
+		}
+
+		&:nth-child(even) {
+			margin-right: 65%;
+			text-align: right;
+
+			.line:before {
+				margin-left: 15px;
+				right: 50%;
+			}
+
+			p.year:before {
+				content: '';
+				width: 10px;
+				height: 10px;
+				background-color: #000;
+				border-radius: 50px;
+				position: absolute;
+				margin-top: 5px;
+				right: 60%;
+			}
+		}
+
+		&.start {
+			margin-top: 0;
+
+			.line:before {
+				max-width: 50px;
+				width: 8%;
+				margin-left: 20px;
+			}
+
+			&:before {
+				content: '';
+				width: 14px;
+				height: 14px;
+				box-shadow: 0 0 0 8px #ccc;
+				margin-left: -2px;
+				background-color: #000;
+				border-radius: 50px;
+				position: absolute;
+				margin-top: 4px;
+				left: 50%;
+			}
+		}
+
+		&.end {
+			margin-top: -10px;
+		}
+
+		p {
+			margin-bottom: 0;
+
+			&.year {
+				font-size: 0.8em;
+
+			}
+
+			&.content {
+				font-size: 0.9em;
+			}
+		}
+
+	}
+}
+
+.lt-ie9 #timeline {
+
+	&:before {
+		display: none;
+	}
+	
+	li {
+
+		&:before {
+			display: none;
+		}
+
+		.line:before {
+			display: none;
+		}
+
+		p.year:before {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+#contact-form {
+	textarea {
+		height: 135px;
+		resize:vertical;
+	}
+
+	button.sent {
+		color: #fff;
+		background-color: #000;
+		cursor: default;
+	}
+}
+
+button.flat, .button.flat {
+	border: 0 none transparent;
+	box-shadow: none;
+	color: #000;
+	background-color: #ccc;
+	font-weight: normal;
+	margin-bottom: 0;
+
+	&:hover {
+		background-color: #000;
+		color: #fff;
+	}
+}
