@@ -12,7 +12,7 @@
     </div>
 
     <div class="bg-gray-200">
-      <div class="container p-4 max-w-2xl mx-auto mt-24 py-16">
+      <div class="container p-4 max-w-2xl mx-auto mt-12 py-16">
         <div class="w-full sm:flex items-center justify-center">
           <p class="w-full text-gray-800 w-3/4 text-lg sm:mr-12">
             My name is Mario Friz, I'm a {{ age }} years old full-stack
