@@ -34,7 +34,7 @@
         to="/"
         class="order-first sm:order-none mb-4 sm:mb-0 mx-auto w-32 h-32 p-2 rounded-full overflow-hidden border-4 border-white"
       >
-        <g-image alt="Mario Friz" src="~/assets/avatar.png" class="mt-4" />
+        <g-image alt="Mario Friz" src="/avatar.png" class="mt-4" />
       </g-link>
 
       <nav class="flex items-center justify-center sm:justify-end flex-1 -mr-3">
