@@ -47,10 +47,6 @@ export default {
 </script>
 
 <style scoped>
-.content >>> {
-  @apply text-gray-800;
-}
-
 .content >>> p:first-child {
   @apply mt-0;
 }
@@ -76,7 +72,7 @@ export default {
 }
 
 .content >>> a {
-  @apply text-teal-600;
+  @apply text-gray-600;
   @apply underline;
 }
 
@@ -100,7 +96,11 @@ export default {
 
 .content >>> pre {
   @apply my-8;
-  @apply rounded-md;
+  @apply -mx-4;
+
+  @media only screen and (min-device-width: 640px) {
+    @apply rounded-md;
+  }
 }
 
 .content >>> pre > code {
